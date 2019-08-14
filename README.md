@@ -1,25 +1,12 @@
-# BOOKMARK MANAGER
+# Bookmark Manager
 
-### user story:
+### Setting up the database
 
-`As a user,`
-`So that I can quickly revisit my favourite websites,`
-`I want to see list of bookmarks`
+1. Connect to `psql` using the command line
+2. Type `CREATE DATABASE bookmark_manager;`
+3. To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the 'db/migrations' folder in the given order.
 
-### domain model
+### Running the Bookmark Manager App:
 
-USER ==> Bookmars ==> Display on the website
-
-### setting up database:
-
-- connect to psql `psql`
-- create database using command `CREATE DATABASE bookmark_manager;`
-- connect to the database with command `\c bookmark_manager;`
-- run the query from `db/migarations/01_create_bookmark_manager`
-
-### setting up test database:
-
-- connect to psql `psql`
-- create database using command `CREATE DATABASE bookmark_manager_test;`
-- connect to the database with command `\c bookmark_manager_test;`
-- run the query from `db/migarations/02_create_bookmark_manager_test`
+1. Type `rackup -p 3000` into the command line
+2. To view bookmarks, type `localhost:3000/bookmarks` into your browser.

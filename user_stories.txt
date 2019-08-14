@@ -1,0 +1,27 @@
+As a user,
+So that I can access websites that I visit frequently
+I would like to see a list of bookmarked websites
+
+As a user,
+So that I can create my own list of bookmarks
+I would like to add and remove from the list of bookmarks
+
+As a user,
+So that I can correct typos in the bookmarks
+I would like to update the existing bookmarks
+
+As a user,
+So that I can personalise my list
+I would like to add comments to the bookmarks
+
+As a user,
+So that I can catagorise my bookmarks
+I would like to add tags to my bookmarks
+
+As a user,
+So that I access the website that I want easier
+I would like to add tags and filter my bookmarks using those tags
+
+As a manager,
+So that I can ensure user safety is maintained
+I would like restrict the user to only manage their own bookmarks
