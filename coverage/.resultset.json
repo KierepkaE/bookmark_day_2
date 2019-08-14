@@ -1,37 +1,39 @@
 {
   "RSpec": {
     "coverage": {
-      "/Volumes/Transcend/MAKERS/week_4/bookmark_manager/spec/bookmarks_spec.rb": [
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/bookmarks_spec.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         1,
         null,
         1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/adding_bookmarks_spec.rb": [
+        null,
+        1,
+        null,
+        1,
         null,
         1,
         1,
         1,
-        null,
         1,
         1,
         null,
         null
       ],
-      "/Volumes/Transcend/MAKERS/week_4/bookmark_manager/spec/features/adding_bookmarks_spec.rb": [
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Volumes/Transcend/MAKERS/week_4/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": [
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/viewing_bookmarks_spec.rb": [
         null,
         1,
         1,
@@ -54,6 +56,6 @@
         null
       ]
     },
-    "timestamp": 1565719104
+    "timestamp": 1565775962
   }
 }
