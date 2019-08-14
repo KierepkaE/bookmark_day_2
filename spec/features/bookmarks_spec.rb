@@ -5,9 +5,9 @@ feature 'Viewing bookmarks' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
 
     # Add the test data
-    Bookmark.add('http://www.makersacademy.com')
-    Bookmark.add( 'http://www.destroyallsoftware.com')
-    Bookmark.add( 'http://www.google.com')
+    Bookmarks.add('http://www.makersacademy.com')
+    Bookmarks.add( 'http://www.destroyallsoftware.com')
+    Bookmarks.add( 'http://www.google.com')
 
     visit('/bookmarks')
 

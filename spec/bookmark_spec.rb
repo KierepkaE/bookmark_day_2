@@ -1,6 +1,6 @@
-require_relative '../lib/bookmark.rb'
+require_relative '../lib/bookmarks.rb'
 
-describe Bookmark do
+describe Bookmarks do
       describe '.all' do
             it 'returns a list of bookmarks' do
               connection = PG.connect(dbname: 'bookmark_manager_test')
@@ -10,7 +10,7 @@ describe Bookmark do
               connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
               connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
 
-              bookmarks = Bookmark.all
+              bookmarks = Bookmarks.all
 
               expect(bookmarks).to include('http://www.makersacademy.com')
               expect(bookmarks).to include('http://www.destroyallsoftware.com')

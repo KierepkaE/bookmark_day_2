@@ -3,7 +3,7 @@ require 'sinatra/base'
 require 'sinatra'
 require 'capybara/dsl'
 require 'selenium-webdriver'
-require_relative './lib/bookmark.rb'
+require_relative './lib/bookmarks.rb'
 
 class BookmarkManager < Sinatra::Base
 
@@ -12,13 +12,13 @@ get '/' do
 end
 
 get '/bookmarks' do
-  @bookmarks = Bookmark.all
+  @bookmarks = Bookmarks.all
   erb :bookmarks
 end
 
 post '/add_bookmark' do
   @url = params[:url]
-  Bookmarks.add(@url)
+  Bookmark.add(@url)
   redirect '/bookmarks'
 end
 

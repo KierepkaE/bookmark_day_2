@@ -1,6 +1,6 @@
 require 'pg'
 
-class Bookmark
+class Bookmarks
 
   def initialize(name, link)
   end
