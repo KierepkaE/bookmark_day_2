@@ -1,24 +1,61 @@
 {
   "RSpec": {
     "coverage": {
-      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/deleting_bookmark.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/bookmarks_spec.rb": [
         1,
         1,
         null,
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
         null,
         null,
         null
+      ],
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/database_helper.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1565784344
+    "timestamp": 1565784618
   }
 }
