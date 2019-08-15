@@ -20,6 +20,10 @@ describe Bookmarks do
    end
 
   describe '.create' do
+    it 'does not create a new bookmark if the URL is not valid' do
+      Bookmarks.add(url: 'not a real bookmark', title: 'not a real bookmark')
+      expect(Bookmarks.all).not_to include 'not a real bookmark'
+    end
 
       it 'creates a new bookmark' do
         bookmark = Bookmarks.add(url: 'http://www.testbookmark.com', title: 'Test Bookmark')

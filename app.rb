@@ -21,11 +21,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/add_bookmark' do
-    if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
-      Bookmarks.add(url: params['url'], title: params[:title])
-    else
-      flash[:notice] = "You must submit a valid URL."
-    end
+    flash[:notice] = "You must submit a valid URL." unless Bookmarks.add(url: params[:url], title: params[:title])
     redirect '/bookmarks'
   end
 
