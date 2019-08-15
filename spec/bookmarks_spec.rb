@@ -1,6 +1,8 @@
 require_relative '../lib/bookmarks.rb'
 require_relative './database_helper.rb'
 require 'comment'
+require 'tag'
+require 'bookmark_tag'
 
 
 describe Bookmarks do

@@ -1,5 +1,6 @@
 require 'tag'
 require 'bookmarks'
+require 'bookmark_tag'
 require_relative './database_helper.rb'
 
  describe Tag do

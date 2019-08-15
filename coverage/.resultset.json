@@ -23,6 +23,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         1,
@@ -127,7 +129,7 @@
         1,
         null,
         1,
-        4,
+        5,
         null
       ],
       "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/comment_spec.rb": [
@@ -197,7 +199,7 @@
         null
       ],
       "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/adding_and_viewing_comments_spec.rb": [
-        1,
+        null,
         1,
         1,
         1,
@@ -212,7 +214,6 @@
         null,
         1,
         1,
-        null,
         null,
         null
       ],
@@ -236,6 +237,18 @@
         1,
         null,
         1,
+        1,
+        null,
+        null
+      ],
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/registration_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
@@ -305,6 +318,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -337,8 +351,46 @@
         null,
         null,
         null
+      ],
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/user_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1565881366
+    "timestamp": 1565884408
   }
 }
