@@ -41,6 +41,21 @@ class Bookmarks
     comment_class.where(bookmark_id: id)
   end
 
+  def tags(tag_class = Tag)
+    tag_class.where(bookmark_id: id)
+  end
+
+  def self.where(tag_id:)
+    result = DatabaseConnection.query("SELECT id, url, title FROM bookmarks_tags INNER JOIN bookmarks ON bookmarks.id = bookmarks_tags.bookmark_id WHERE tag_id = #{tag_id};")
+    result.map do |bookmark|
+      Bookmark.new(
+        id: bookmark['id'],
+        title: bookmark['title'],
+        url: bookmark['url']
+      )
+    end
+  end
+
   private
   def self.is_url?(url)
     url =~ /\A#{URI::regexp(['http', 'https'])}\z/

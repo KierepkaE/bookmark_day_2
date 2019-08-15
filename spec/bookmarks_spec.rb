@@ -77,6 +77,7 @@ end
 
 describe '#comments' do
   let(:comment_class) { double(:comment_class) }
+  let(:tag_class) { double(:tag_class) }
   it 'calls .where on the Comment class' do
     bookmark = Bookmarks.add(title: 'Makers Academy', url: 'http://www.makersacademy.com')
     expect(comment_class).to receive(:where).with(bookmark_id: bookmark.id)
@@ -84,6 +85,16 @@ describe '#comments' do
     bookmark.comments(comment_class)
   end
 
+end
+describe '#tags' do
+  let(:comment_class) { double(:comment_class) }
+  let(:tag_class) { double(:tag_class) }
+  it 'calls .where on the Tag class' do
+    bookmark = Bookmarks.add(title: 'Makers Academy', url: 'http://www.makersacademy.com')
+    expect(tag_class).to receive(:where).with(bookmark_id: bookmark.id)
+
+     bookmark.tags(tag_class)
+  end
 end
 
 end
