@@ -118,6 +118,15 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/updating_a_bookmark_spec.rb": [
@@ -162,6 +171,6 @@
         null
       ]
     },
-    "timestamp": 1565862493
+    "timestamp": 1565863654
   }
 }

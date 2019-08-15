@@ -1,12 +1,15 @@
 require 'sinatra/base'
-require_relative './lib/bookmarks.rb'
 require 'pg'
+require 'uri'
+require 'sinatra/flash'
+require_relative './lib/bookmarks.rb'
 require_relative './lib/database_connection.rb'
 require_relative './lib/database_connection_setup.rb'
 
 class BookmarkManager < Sinatra::Base
 
   enable :sessions, :method_override
+  register Sinatra::Flash
 
   get '/' do
     'Bookmark Manager'
@@ -18,7 +21,11 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/add_bookmark' do
-    Bookmarks.add(url: params[:url], title: params[:title])
+    if params['url'] =~ /\A#{URI::regexp(['http', 'https'])}\z/
+      Bookmarks.add(url: params['url'], title: params[:title])
+    else
+      flash[:notice] = "You must submit a valid URL."
+    end
     redirect '/bookmarks'
   end
 

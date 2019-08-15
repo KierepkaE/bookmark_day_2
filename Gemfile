@@ -15,3 +15,5 @@ gem "simplecov", "~> 0.17.0"
 gem "simplecov-console", "~> 0.5.0"
 
 gem "pg", "~> 1.1"
+
+gem 'sinatra-flash', '0.3.0'

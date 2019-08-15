@@ -23,6 +23,7 @@
 <form
 style = 'background:none; text-align: center; margin: 0 auto; padding: 15px'
 action='/add_bookmark' method='post' >
+<%= flash[:notice] %>
 <input type= 'text' name = 'url' placeholder='url'>
 <input type= 'text' name = 'title' placeholder='title'>
 <input type= 'submit' value='add' name = 'add'>
