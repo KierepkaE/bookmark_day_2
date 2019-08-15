@@ -1,4 +1,5 @@
 require 'pg'
+require_relative './database_connection.rb'
 
 class Bookmarks
   attr_reader :id, :title, :url
@@ -7,13 +8,9 @@ class Bookmarks
     @title = title
     @url = url
   end
+
   def self.all
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'bookmark_manager_test')
-    else
-      connection = PG.connect(dbname: 'bookmark_manager')
-    end
-    result = connection.exec('SELECT * FROM bookmarks;')
+    result = DatabaseConnection.query("SELECT * FROM bookmarks")
     result.map { |bookmark|
       Bookmarks.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     }

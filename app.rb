@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require_relative './lib/bookmarks.rb'
 require 'pg'
+require_relative './lib/database_connection.rb'
+require_relative './lib/database_connection_setup.rb'
 
 class BookmarkManager < Sinatra::Base
 
@@ -27,14 +29,12 @@ class BookmarkManager < Sinatra::Base
   end
 
 
-
   patch '/bookmarks/:id' do
     Bookmarks.update(id: params[:id], title: params[:title], url: params[:url])
     redirect('/bookmarks')
   end
 
   get '/bookmarks/:id/edit' do
-    p params
     @bookmark = Bookmarks.find(id: params[:id])
     erb :edit
   end
