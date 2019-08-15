@@ -1,5 +1,7 @@
 require_relative '../lib/bookmarks.rb'
 require_relative './database_helper.rb'
+require 'comment'
+
 
 describe Bookmarks do
   it 'returns a list of bookmarks' do
@@ -24,15 +26,20 @@ describe Bookmarks do
       Bookmarks.add(url: 'not a real bookmark', title: 'not a real bookmark')
       expect(Bookmarks.all).not_to include 'not a real bookmark'
     end
+  end
 
-      it 'creates a new bookmark' do
-        bookmark = Bookmarks.add(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
-        persisted_data = persisted_data(id: bookmark.id)
+    describe '.create' do
+      it 'creates a new comment' do
+        bookmark = Bookmarks.add(url: "http://www.makersacademy.com", title: "Makers Academy")
+        comment = Comment.create(text: 'This is a test comment', bookmark_id: bookmark.id)
 
-        expect(bookmark).to be_a Bookmarks
-        expect(bookmark.title).to eq 'Test Bookmark'
-        expect(bookmark.url).to eq 'http://www.testbookmark.com'
-    end
+        persisted_data = persisted_data(table: 'comments', id: comment.id )
+
+        expect(comment).to be_a Comment
+        expect(comment.id).to eq persisted_data.first['id']
+        expect(comment.text).to eq 'This is a test comment'
+        expect(comment.bookmark_id).to eq bookmark.id
+      end
 end
 describe '.delete' do
   it 'deletes the given bookmark' do
@@ -66,14 +73,18 @@ describe '.find' do
     expect(result.url).to eq 'http://www.makersacademy.com'
   end
 end
+
+
 describe '#comments' do
-  it 'returns a list of comments on the bookmark' do
+  let(:comment_class) { double(:comment_class) }
+  it 'calls .where on the Comment class' do
     bookmark = Bookmarks.add(title: 'Makers Academy', url: 'http://www.makersacademy.com')
-    DatabaseConnection.query("INSERT INTO comments (id, text, bookmark_id) VALUES(1, 'Test comment', #{bookmark.id})")
+    expect(comment_class).to receive(:where).with(bookmark_id: bookmark.id)
 
-    comment = bookmark.comments.first
-
-    expect(comment['text']).to eq 'Test comment'
+    bookmark.comments(comment_class)
   end
+
 end
+
 end
+
