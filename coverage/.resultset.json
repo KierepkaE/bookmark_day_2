@@ -241,6 +241,20 @@
         null,
         null
       ],
+      "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/authentication_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Volumes/Transcend/MAKERS/week_4/bookmark_day_2/spec/features/registration_spec.rb": [
         1,
         1,
@@ -388,9 +402,18 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1565884408
+    "timestamp": 1565885249
   }
 }

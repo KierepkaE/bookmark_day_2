@@ -77,6 +77,16 @@ class BookmarkManager < Sinatra::Base
     redirect('/bookmarks')
   end
 
+  get '/sessions/new' do
+    erb :new_session
+  end
+
+   post '/sessions' do
+    user = User.authenticate(email: params[:email], password: params[:password])
+    session[:user_id] = user.id
+    redirect('/bookmarks')
+  end
+
 
   run! if app_file == $PROGRAM_NAME
 
