@@ -1,5 +1,6 @@
 # Bookmark Manager
 
+###### Small app that allows the user to log in, log out and add/update/delete his bookmarks.
 
 ### setting up database:
 
