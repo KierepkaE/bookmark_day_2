@@ -8,7 +8,7 @@ gem "capybara", "~> 3.28"
 
 gem "rubocop", "~> 0.74.0"
 
-gem "rack", "~> 2.0"
+gem "rack", "~> 2.1"
 
 gem "simplecov", "~> 0.17.0"
 
